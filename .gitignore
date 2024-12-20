@@ -1,0 +1,23 @@
+# Object files
+*.o
+
+# Execute files
+*.exe
+*.out
+*.app
+
+# Class files
+*.class
+
+# NetBeans folders
+**/nbproject/private/
+**/nbproject/*
+!**/nbproject/project.properties
+!**/nbproject/configurations.xml
+!**/nbproject/project.xml
+build/
+dist/
+
+# NetBeans files
+*/.dep.inc
+*.inc
