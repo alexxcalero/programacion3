@@ -1,0 +1,23 @@
+1. javac com/medicalsoft/rrhh/model/*.java
+
+2. jar cf "medicalsoftRRHHModel.jar" com/medicalsoft/rrhh/model/*.class
+
+3. javac -cp medicalsoftRRHHModel.jar com/medicalsoft/infraestructura/model/*.java
+
+4. jar cf "medicalsoftInfraModel.jar" com/medicalsoft/infraestructura/model/*.class
+
+5. javac -cp medicalsoftRRHHModel.jar;medicalsoftInfraModel.jar; com/medicalsoft/servicios/model/*.java
+
+6. jar cf "medicalsoftServModel.jar" com/medicalsoft/servicios/model/*.class
+
+7. javac -cp medicalsoftRRHHModel.jar;medicalsoftInfraModel.jar;medicalsoftServModel.jar; com/medicalsoft/program/main/*.java
+
+8. jar cfm "medicalsoftPrincipal.jar" MANIFEST.MF com/medicalsoft/program/main/*.class
+
+9. java -jar medicalsoftPrincipal.jar
+
+10. El archivo MANIFEST debe contener lo siguiente:
+	Manifest-Version: 1.0
+	Created-By: 21.0.4 (Oracle Corporation)
+	Class-Path: medicalsoftRRHHModel.jar medicalsoftInfraModel.jar medicalsoftServModel.jar
+	Main-Class: com/medicalsoft/program/main/Principal

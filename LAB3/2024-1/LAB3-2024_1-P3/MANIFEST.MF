@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: 21.0.4 (Oracle Corporation)
+Class-Path: medicalsoftRRHHModel.jar medicalsoftInfraModel.jar medicalsoftServModel.jar
+Main-Class: com/medicalsoft/program/main/Principal
