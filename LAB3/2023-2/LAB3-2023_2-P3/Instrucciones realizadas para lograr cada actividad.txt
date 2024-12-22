@@ -1,0 +1,23 @@
+1. javac org/pucp/airsoft/companies/model/*.java
+
+2. jar cf "airsoftCompanies.jar" org/pucp/airsoft/companies/model/*.class
+
+3. javac -cp airsoftCompanies.jar org/pucp/airsoft/engines/model/*.java
+
+4. jar cf "airsoftEngines.jar" org/pucp/airsoft/engines/model/*.class
+
+5. javac -cp airsoftCompanies.jar;airsoftEngines.jar; org/pucp/airsoft/management/model/*.java
+
+6. jar cf "airsoftManagement.jar" org/pucp/airsoft/management/model/*.class
+
+7. javac -cp airsoftCompanies.jar;airsoftEngines.jar;airsoftManagement.jar; org/pucp/airsoft/program/main/*.java
+
+8. jar cfm "airsoftPrincipal.jar" MANIFEST.MF org/pucp/airsoft/program/main/*.class
+
+9. java -jar airsoftPrincipal.jar
+
+10. El archivo MANIFEST debe contener lo siguiente:
+	Manifest-Version: 1.0
+	Created-By: 21.0.4 (Oracle Corporation)
+	Class-Path: airsoftCompanies.jar airsoftEngines.jar airsoftManagement.jar
+	Main-Class: org/pucp/airsoft/program/main/Principal
