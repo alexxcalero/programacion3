@@ -1,0 +1,21 @@
+1. javac pe/edu/pucp/eventmastersoft/contratos/model/*.java
+
+2. jar cf "eventmastersoftContratosModel.jar" pe/edu/pucp/eventmastersoft/contratos/model/*.class
+
+3. javac pe/edu/pucp/eventmastersoft/logistica/model/*.java
+
+4. jar cf "eventmastersoftLogisticaModel.jar" pe/edu/pucp/eventmastersoft/logistica/model/*.class
+
+5. javac -cp eventmastersoftContratosModel.jar;eventmastersoftLogisticaModel.jar; pe/edu/pucp/eventmastersoft/gestion/model/*.java
+
+6. jar cf "eventmastersoftGestionModel.jar" pe/edu/pucp/eventmastersoft/gestion/model/*.class
+
+7. javac -cp eventmastersoftContratosModel.jar;eventmastersoftLogisticaModel.jar;eventmastersoftGestionModel.jar; pe/edu/pucp/eventmastersoft/program/main/*.java
+
+8. jar cfm "eventmastersoftPrincipal.jar" MANIFEST.MF pe/edu/pucp/eventmastersoft/program/main/*.class
+
+9. El archivo MANIFEST debe contener lo siguiente:
+	Manifest-Version: 1.0
+	Created-By: 21.0.2 (Oracle Corporation)
+	Class-Path: eventmastersoftContratosModel.jar eventmastersoftLogisticaModel.jar eventmastersoftGestionModel.jar
+	Main-Class: pe/edu/pucp/eventmastersoft/program/main/Principal
