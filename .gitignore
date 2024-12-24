@@ -21,3 +21,23 @@ dist/
 # NetBeans files
 */.dep.inc
 *.inc
+
+# Visual Studio folders
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+msbuild.log
+msbuild.err
+msbuild.wrn
+.vs/
+
+# Visual Studio Code
+.vscode/
