@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.eventmastersoft.pucp.edu.pe" targetNamespace="http://services.eventmastersoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarEvento" type="tns:insertarEvento" />
+  <xs:element name="insertarEventoResponse" type="tns:insertarEventoResponse" />
+  <xs:element name="listarEventosPorNombre" type="tns:listarEventosPorNombre" />
+  <xs:element name="listarEventosPorNombreResponse" type="tns:listarEventosPorNombreResponse" />
+  <xs:element name="obtenerEventoPorId" type="tns:obtenerEventoPorId" />
+  <xs:element name="obtenerEventoPorIdResponse" type="tns:obtenerEventoPorIdResponse" />
+  <xs:complexType name="insertarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evento">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="bannerPromocional" type="xs:base64Binary" />
+      <xs:element name="clasificacion" type="xs:unsignedShort" />
+      <xs:element name="costoRealizacion" type="xs:double" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaRealizacion" type="xs:dateTime" />
+      <xs:element name="idEvento" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="permiteGrabacion" type="xs:boolean" />
+      <xs:element name="permiteReingreso" type="xs:boolean" />
+      <xs:element minOccurs="0" name="productora" type="tns:productora" />
+      <xs:element minOccurs="0" name="tipoEvento" type="tns:tipoEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productora">
+    <xs:sequence>
+      <xs:element name="activa" type="xs:boolean" />
+      <xs:element name="idProductora" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEventoPorId">
+    <xs:sequence>
+      <xs:element name="idEvento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEventoPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoEvento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OBRA_TEATRAL" />
+      <xs:enumeration value="CONCIERTO" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.eventmastersoft.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="EventoWS" targetNamespace="http://services.eventmastersoft.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/EventMasterSoftWSBL/EventoWS?xsd=1" namespace="http://services.eventmastersoft.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="insertarEvento">
+    <part name="parameters" element="tns:insertarEvento" />
+  </message>
+  <message name="insertarEventoResponse">
+    <part name="parameters" element="tns:insertarEventoResponse" />
+  </message>
+  <message name="listarEventosPorNombre">
+    <part name="parameters" element="tns:listarEventosPorNombre" />
+  </message>
+  <message name="listarEventosPorNombreResponse">
+    <part name="parameters" element="tns:listarEventosPorNombreResponse" />
+  </message>
+  <message name="obtenerEventoPorId">
+    <part name="parameters" element="tns:obtenerEventoPorId" />
+  </message>
+  <message name="obtenerEventoPorIdResponse">
+    <part name="parameters" element="tns:obtenerEventoPorIdResponse" />
+  </message>
+  <portType name="EventoWS">
+    <operation name="insertarEvento">
+      <input wsam:Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/insertarEventoRequest" message="tns:insertarEvento" />
+      <output wsam:Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
+    </operation>
+    <operation name="listarEventosPorNombre">
+      <input wsam:Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreRequest" message="tns:listarEventosPorNombre" />
+      <output wsam:Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreResponse" message="tns:listarEventosPorNombreResponse" />
+    </operation>
+    <operation name="obtenerEventoPorId">
+      <input wsam:Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/obtenerEventoPorIdRequest" message="tns:obtenerEventoPorId" />
+      <output wsam:Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/obtenerEventoPorIdResponse" message="tns:obtenerEventoPorIdResponse" />
+    </operation>
+  </portType>
+  <binding name="EventoWSPortBinding" type="tns:EventoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEventosPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerEventoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EventoWS">
+    <port name="EventoWSPort" binding="tns:EventoWSPortBinding">
+      <soap:address location="http://localhost:8080/EventMasterSoftWSBL/EventoWS" />
+    </port>
+  </service>
+</definitions>
