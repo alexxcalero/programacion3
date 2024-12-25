@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="services.sazonware.pucp.edu.pe" targetNamespace="services.sazonware.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarPlato" type="tns:insertarPlato" />
+  <xs:element name="insertarPlatoResponse" type="tns:insertarPlatoResponse" />
+  <xs:complexType name="insertarPlato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="plato" type="tns:plato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="plato">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="categoria" type="tns:categoria" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idPlato" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ingredientes" nillable="true" type="tns:ingrediente" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="precio" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingrediente">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idIngrediente" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPlatoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="categoria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ENTRADA" />
+      <xs:enumeration value="FONDO" />
+      <xs:enumeration value="POSTRE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="services.sazonware.pucp.edu.pe" targetNamespace="services.sazonware.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="listarIngredientesTodos" type="tns:listarIngredientesTodos" />
+  <xs:element name="listarIngredientesTodosResponse" type="tns:listarIngredientesTodosResponse" />
+  <xs:complexType name="listarIngredientesTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingrediente">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idIngrediente" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
