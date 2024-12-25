@@ -1,0 +1,5 @@
+hostname=bd-probar-cosas.cp4mukkc4f93.us-east-1.rds.amazonaws.com
+user=admin
+password=programacion3
+port=3306
+database=laboratorio09
