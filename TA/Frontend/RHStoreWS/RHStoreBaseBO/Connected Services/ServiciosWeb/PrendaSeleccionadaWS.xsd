@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="softrh.services" targetNamespace="softrh.services" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="aplicarCuponLista" type="tns:aplicarCuponLista" />
+  <xs:element name="aplicarCuponListaResponse" type="tns:aplicarCuponListaResponse" />
+  <xs:element name="eliminarPrendaSeleccionada" type="tns:eliminarPrendaSeleccionada" />
+  <xs:element name="eliminarPrendaSeleccionadaResponse" type="tns:eliminarPrendaSeleccionadaResponse" />
+  <xs:element name="insertarPrendaSeleccionada" type="tns:insertarPrendaSeleccionada" />
+  <xs:element name="insertarPrendaSeleccionadaResponse" type="tns:insertarPrendaSeleccionadaResponse" />
+  <xs:element name="listarPrendasIdCarrito" type="tns:listarPrendasIdCarrito" />
+  <xs:element name="listarPrendasIdCarritoResponse" type="tns:listarPrendasIdCarritoResponse" />
+  <xs:element name="listarPrendasIdOrden" type="tns:listarPrendasIdOrden" />
+  <xs:element name="listarPrendasIdOrdenResponse" type="tns:listarPrendasIdOrdenResponse" />
+  <xs:element name="modificarPrendaSeleccionada" type="tns:modificarPrendaSeleccionada" />
+  <xs:element name="modificarPrendaSeleccionadaResponse" type="tns:modificarPrendaSeleccionadaResponse" />
+  <xs:element name="obtenerPrendaSeleccionadaPorId" type="tns:obtenerPrendaSeleccionadaPorId" />
+  <xs:element name="obtenerPrendaSeleccionadaPorIdResponse" type="tns:obtenerPrendaSeleccionadaPorIdResponse" />
+  <xs:complexType name="listarPrendasIdCarrito">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasIdCarritoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prendaSeleccionada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prendaSeleccionada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="carrito" type="tns:carrito" />
+      <xs:element minOccurs="0" name="idCarrito" type="xs:int" />
+      <xs:element minOccurs="0" name="idPrendaSeleccionada" type="xs:int" />
+      <xs:element minOccurs="0" name="precio" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="carrito">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidadTotal" type="xs:int" />
+      <xs:element minOccurs="0" name="idCarrito" type="xs:int" />
+      <xs:element minOccurs="0" name="orden" type="tns:ordenCompra" />
+      <xs:element minOccurs="0" name="precioTotal" type="xs:double" />
+      <xs:element minOccurs="0" name="fidCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ordenCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="carrito" type="tns:carrito" />
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="comprobante" type="tns:comprobante" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="cupon" type="tns:cupon" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="tns:estado" />
+      <xs:element minOccurs="0" name="fechaAnulado" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaEntregado" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaProcesado" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idOrden" type="xs:int" />
+      <xs:element minOccurs="0" name="paypal_id" type="xs:string" />
+      <xs:element minOccurs="0" name="subtotal" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="recibePromociones" type="xs:boolean" />
+          <xs:element minOccurs="0" name="telefono" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="usuario" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idComprobante" type="xs:int" />
+      <xs:element minOccurs="0" name="orden" type="tns:ordenCompra" />
+      <xs:element minOccurs="0" name="totalPagar" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cupon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idCupon" type="xs:int" />
+      <xs:element minOccurs="0" name="trabajador" type="tns:trabajador" />
+      <xs:element minOccurs="0" name="valorDescuento" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="trabajador">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fechaIngreso" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="horarioFin" type="xs:string" />
+          <xs:element minOccurs="0" name="horarioInicio" type="xs:string" />
+          <xs:element minOccurs="0" name="puesto" type="xs:string" />
+          <xs:element minOccurs="0" name="sueldo" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="insertarPrendaSeleccionada">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+      <xs:element name="arg1" type="xs:int" />
+      <xs:element name="arg2" type="xs:int" />
+      <xs:element name="arg3" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPrendaSeleccionadaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrendaSeleccionada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:prendaSeleccionada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrendaSeleccionadaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasIdOrden">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasIdOrdenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prendaSeleccionada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrendaSeleccionadaPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrendaSeleccionadaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:prendaSeleccionada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPrendaSeleccionada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPrendaSeleccionadaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aplicarCuponLista">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aplicarCuponListaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="estado">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Registrado" />
+      <xs:enumeration value="Procesado" />
+      <xs:enumeration value="Pagado" />
+      <xs:enumeration value="Entregado" />
+      <xs:enumeration value="Anulado" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

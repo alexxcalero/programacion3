@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\RHStoreWS</_PublishTargetUrl>
+    <History>True|2024-11-28T06:21:41.0755819Z||;True|2024-11-27T15:46:11.0123836-05:00||;True|2024-11-27T14:00:31.3968117-05:00||;True|2024-11-27T13:58:11.1642629-05:00||;False|2024-11-27T13:54:07.9654514-05:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Admin/Admin.Master">
+      <publishTime>11/26/2024 02:09:32</publishTime>
+    </File>
+    <File Include="Admin/CambiarContrasenha.aspx">
+      <publishTime>11/27/2024 23:45:19</publishTime>
+    </File>
+    <File Include="Admin/CrudAdministradores.aspx">
+      <publishTime>11/26/2024 02:09:32</publishTime>
+    </File>
+    <File Include="Admin/CrudClientes.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/CrudCupones.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/CrudOrdenes.aspx">
+      <publishTime>11/26/2024 05:21:14</publishTime>
+    </File>
+    <File Include="Admin/CrudPrendas.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/CrudPromociones.aspx">
+      <publishTime>11/28/2024 00:08:37</publishTime>
+    </File>
+    <File Include="Admin/CrudTrabajadores.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/GestionarAdministradores.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/GestionarClientes.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/GestionarCupones.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/GestionarOrdenes.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/GestionarPrendas.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/GestionarPromociones.aspx">
+      <publishTime>11/26/2024 19:26:31</publishTime>
+    </File>
+    <File Include="Admin/GestionarTrabajadores.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/Home.aspx">
+      <publishTime>11/27/2024 23:45:19</publishTime>
+    </File>
+    <File Include="Admin/IniciarSesion.aspx">
+      <publishTime>11/27/2024 23:45:19</publishTime>
+    </File>
+    <File Include="Admin/ModificarContrasenha.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/Perfil.aspx">
+      <publishTime>11/26/2024 02:09:34</publishTime>
+    </File>
+    <File Include="Admin/RecuperarContrasenha.aspx">
+      <publishTime>11/26/2024 02:09:36</publishTime>
+    </File>
+    <File Include="Admin/Registrarse.aspx">
+      <publishTime>11/26/2024 02:09:36</publishTime>
+    </File>
+    <File Include="Admin/Reportes.aspx">
+      <publishTime>11/26/2024 02:09:36</publishTime>
+    </File>
+    <File Include="bin/BouncyCastle.Cryptography.dll">
+      <publishTime>11/26/2024 02:09:20</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>11/26/2024 02:09:22</publishTime>
+    </File>
+    <File Include="bin/RHStoreBaseBO.dll">
+      <publishTime>11/28/2024 01:21:38</publishTime>
+    </File>
+    <File Include="bin/RHStoreBaseBO.dll.config">
+      <publishTime>11/28/2024 00:57:41</publishTime>
+    </File>
+    <File Include="bin/RHStoreBaseBO.pdb">
+      <publishTime>11/28/2024 01:21:38</publishTime>
+    </File>
+    <File Include="bin/RHStoreComprasBO.dll">
+      <publishTime>11/28/2024 01:21:38</publishTime>
+    </File>
+    <File Include="bin/RHStoreComprasBO.pdb">
+      <publishTime>11/28/2024 01:21:38</publishTime>
+    </File>
+    <File Include="bin/RHStorePrendasBO.dll">
+      <publishTime>11/28/2024 01:21:38</publishTime>
+    </File>
+    <File Include="bin/RHStorePrendasBO.pdb">
+      <publishTime>11/28/2024 01:21:38</publishTime>
+    </File>
+    <File Include="bin/RHStoreUsuariosBO.dll">
+      <publishTime>11/28/2024 01:21:38</publishTime>
+    </File>
+    <File Include="bin/RHStoreUsuariosBO.pdb">
+      <publishTime>11/28/2024 01:21:38</publishTime>
+    </File>
+    <File Include="bin/RHStoreWS.dll">
+      <publishTime>11/28/2024 01:21:39</publishTime>
+    </File>
+    <File Include="bin/RHStoreWS.pdb">
+      <publishTime>11/28/2024 01:21:39</publishTime>
+    </File>
+    <File Include="Cliente/Carrito.aspx">
+      <publishTime>11/26/2024 13:09:49</publishTime>
+    </File>
+    <File Include="Cliente/Cliente.Master">
+      <publishTime>11/26/2024 04:17:02</publishTime>
+    </File>
+    <File Include="Cliente/ClienteHome.aspx">
+      <publishTime>11/26/2024 04:16:54</publishTime>
+    </File>
+    <File Include="Cliente/ComprasCliente.aspx">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Cliente/DetalleCompraCliente.aspx">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Cliente/DireccionesCliente.aspx">
+      <publishTime>11/28/2024 00:09:30</publishTime>
+    </File>
+    <File Include="Cliente/Pagado.aspx">
+      <publishTime>11/27/2024 23:45:19</publishTime>
+    </File>
+    <File Include="Cliente/PerfilCliente.aspx">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Cliente/ProductoDetalle.aspx">
+      <publishTime>11/26/2024 10:55:47</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.css">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.css.map">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.min.css">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.min.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.rtl.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.rtl.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.rtl.min.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.rtl.min.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.min.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.min.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.rtl.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.rtl.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.rtl.min.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.rtl.min.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.min.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.min.css.map">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.rtl.css">
+      <publishTime>11/26/2024 02:09:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.rtl.css.map">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.rtl.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.rtl.min.css.map">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap.rtl.css">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap.rtl.css.map">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap.rtl.min.css">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap.rtl.min.css.map">
+      <publishTime>11/26/2024 02:09:40</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/all.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/all.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/brands.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/brands.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/duotone.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/duotone.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/fontawesome.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/fontawesome.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/light.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/light.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/regular.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/regular.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/solid.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/solid.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/svg-with-js.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/svg-with-js.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/thin.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/thin.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/v4-font-face.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/v4-font-face.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/v4-shims.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/v4-shims.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/v5-font-face.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/css/v5-font-face.min.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-brands-400.ttf">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-brands-400.woff">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-brands-400.woff2">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-duotone-900.ttf">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-duotone-900.woff">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-duotone-900.woff2">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-light-300.ttf">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-light-300.woff">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-light-300.woff2">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-regular-400.ttf">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-regular-400.woff">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-regular-400.woff2">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-solid-900.ttf">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-solid-900.woff">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-solid-900.woff2">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-thin-100.ttf">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-thin-100.woff">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-thin-100.woff2">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-v4compatibility.ttf">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/Fonts/webfonts/fa-v4compatibility.woff2">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Content/styles.css">
+      <publishTime>11/26/2024 02:09:44</publishTime>
+    </File>
+    <File Include="Images/CamisaHombre.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/CardiganMujer.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/fondo.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/grafica.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/LoginFondo.png">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/logo2.png">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/Pantalon cammo.jpg">
+      <publishTime>11/26/2024 04:44:40</publishTime>
+    </File>
+    <File Include="Images/PantalonHombre.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/PantalonMujer.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/Paw.gif">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/pencil.png">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/pengui.png">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/penguin.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/PlaceHolder.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/Pnatalon rasgado.jpg">
+      <publishTime>11/26/2024 04:44:24</publishTime>
+    </File>
+    <File Include="Images/prenda1.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/prenda2.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/prenda3.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/prenda4.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/prenda5.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/prenda6.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/RH Team Polera Marron.jpg">
+      <publishTime>11/26/2024 04:44:36</publishTime>
+    </File>
+    <File Include="Images/RH Team Polo blanco.jpg">
+      <publishTime>11/26/2024 04:44:32</publishTime>
+    </File>
+    <File Include="Images/rhreportes.png">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Images/RHStoreLG.jpg">
+      <publishTime>11/26/2024 02:09:46</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js">
+      <publishTime>11/26/2024 02:09:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js.map">
+      <publishTime>11/26/2024 02:09:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js">
+      <publishTime>11/26/2024 02:09:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js.map">
+      <publishTime>11/26/2024 02:09:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.esm.js">
+      <publishTime>11/26/2024 02:09:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.esm.js.map">
+      <publishTime>11/26/2024 02:09:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.esm.min.js">
+      <publishTime>11/26/2024 02:09:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.esm.min.js.map">
+      <publishTime>11/26/2024 02:09:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js.map">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js.map">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.js">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.min.js">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.min.map">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.slim.js">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.slim.min.js">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.slim.min.map">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/RHStore/CrudPromociones.js">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Scripts/RHStore/ModalesDeError.js">
+      <publishTime>11/26/2024 02:09:50</publishTime>
+    </File>
+    <File Include="Site1.Master">
+      <publishTime>11/26/2024 02:09:32</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/28/2024 01:21:39</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="softrh.services" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CarritoWS" targetNamespace="softrh.services" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/CarritoWS?xsd=1" namespace="softrh.services" />
+    </xsd:schema>
+  </types>
+  <message name="limpiarCarrito">
+    <part name="parameters" element="tns:limpiarCarrito" />
+  </message>
+  <message name="limpiarCarritoResponse">
+    <part name="parameters" element="tns:limpiarCarritoResponse" />
+  </message>
+  <message name="modificarCarrito">
+    <part name="parameters" element="tns:modificarCarrito" />
+  </message>
+  <message name="modificarCarritoResponse">
+    <part name="parameters" element="tns:modificarCarritoResponse" />
+  </message>
+  <message name="insertarCarrito">
+    <part name="parameters" element="tns:insertarCarrito" />
+  </message>
+  <message name="insertarCarritoResponse">
+    <part name="parameters" element="tns:insertarCarritoResponse" />
+  </message>
+  <message name="obtenerCarritoPorIdCliente">
+    <part name="parameters" element="tns:obtenerCarritoPorIdCliente" />
+  </message>
+  <message name="obtenerCarritoPorIdClienteResponse">
+    <part name="parameters" element="tns:obtenerCarritoPorIdClienteResponse" />
+  </message>
+  <message name="bug">
+    <part name="parameters" element="tns:bug" />
+  </message>
+  <message name="bugResponse">
+    <part name="parameters" element="tns:bugResponse" />
+  </message>
+  <portType name="CarritoWS">
+    <operation name="limpiarCarrito">
+      <input wsam:Action="softrh.services/CarritoWS/limpiarCarritoRequest" message="tns:limpiarCarrito" />
+      <output wsam:Action="softrh.services/CarritoWS/limpiarCarritoResponse" message="tns:limpiarCarritoResponse" />
+    </operation>
+    <operation name="modificarCarrito">
+      <input wsam:Action="softrh.services/CarritoWS/modificarCarritoRequest" message="tns:modificarCarrito" />
+      <output wsam:Action="softrh.services/CarritoWS/modificarCarritoResponse" message="tns:modificarCarritoResponse" />
+    </operation>
+    <operation name="insertarCarrito">
+      <input wsam:Action="softrh.services/CarritoWS/insertarCarritoRequest" message="tns:insertarCarrito" />
+      <output wsam:Action="softrh.services/CarritoWS/insertarCarritoResponse" message="tns:insertarCarritoResponse" />
+    </operation>
+    <operation name="obtenerCarritoPorIdCliente">
+      <input wsam:Action="softrh.services/CarritoWS/obtenerCarritoPorIdClienteRequest" message="tns:obtenerCarritoPorIdCliente" />
+      <output wsam:Action="softrh.services/CarritoWS/obtenerCarritoPorIdClienteResponse" message="tns:obtenerCarritoPorIdClienteResponse" />
+    </operation>
+    <operation name="bug">
+      <input wsam:Action="softrh.services/CarritoWS/bugRequest" message="tns:bug" />
+      <output wsam:Action="softrh.services/CarritoWS/bugResponse" message="tns:bugResponse" />
+    </operation>
+  </portType>
+  <binding name="CarritoWSPortBinding" type="tns:CarritoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="limpiarCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerCarritoPorIdCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="bug">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CarritoWS">
+    <port name="CarritoWSPort" binding="tns:CarritoWSPortBinding">
+      <soap:address location="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/CarritoWS" />
+    </port>
+  </service>
+</definitions>

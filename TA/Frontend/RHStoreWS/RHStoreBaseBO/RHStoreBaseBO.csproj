@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42B8F628-0913-4CEB-B209-042422B2BD93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RHStoreBaseBO</RootNamespace>
+    <AssemblyName>RHStoreBaseBO</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseBO.cs" />
+    <Compile Include="Connected Services\ServiciosWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\ServiciosWeb\AdministradorWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\AdministradorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\CarritoWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\CarritoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\ClienteWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\CuponWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\CuponWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\DireccionWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\DireccionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\OrdenCompraWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\OrdenCompraWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\PrendaSeleccionadaWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\PrendaSeleccionadaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\PrendaWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\PrendaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\PromocionWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\PromocionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RecuperarContrasenhaWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\RecuperarContrasenhaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.administrador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.aplicarCuponListaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.bugResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.cambiarContrasenhaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.cambiarEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.capturarPagoConPayPalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.carrito.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.cupon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.direccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarCuponResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarDireccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarPrendaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarPrendaSeleccionadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.eliminarTrabajadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.guardarTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarCarritoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarCuponResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarCuponUsadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarDireccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarOrdenCompraConCuponResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarOrdenCompraSinCuponResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarPrendaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarPrendaSeleccionadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.insertarTrabajadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.limpiarCarritoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarAdministradoresPorDniNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarAdministradoresTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarClientesPorDniNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarClientesTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarCuponesPorCodigoDescripcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarCuponesTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarDireccionesPorIdClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarDireccionesTodasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarOrdenCompraTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarOrdenPorEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPorIdClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPrendasAgregadasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPrendasFiltradasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPrendasIdCarritoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPrendasIdOrdenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPrendasPorGeneroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPrendasPorNombreDescripcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPrendasTodasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPromocionesPorNombreDescripcionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarPromocionesTodasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarTrabajadoresPorDniNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.listarTrabajadoresTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarCarritoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarCuponResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarDireccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarPrendaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarPrendaSeleccionadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarTrabajadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.modificarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerAdministradorPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerCarritoPorIdClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerClientePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerColoresPorPrendaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerColoresUnicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerCuponPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerDireccionPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerIdPorCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerIdUsuarioPorTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerImagenPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerOrdenCompraPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerPrendaPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerPrendaSeleccionadaPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerPromocionPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerRolUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerTallasPorPrendaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerTallasUnicasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerTrabajadorPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerValoresTotalesPorMesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.obtenerValoresTotalesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.ordenCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.pagarConPaypalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.prenda.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.prendaSeleccionada.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.promocion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.resetearContrasenhaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.totales.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.trabajador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.verificarContrasenhaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.verificarCorreoExistenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\RHStoreBaseBO.ServiciosWeb.verificarIngresoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\TotalesWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\TotalesWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\TrabajadorWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\TrabajadorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosWeb\UsuarioWS.wsdl" />
+    <None Include="Connected Services\ServiciosWeb\UsuarioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiciosWeb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiciosWeb\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiciosWeb\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiciosWeb\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiciosWeb\archivo.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

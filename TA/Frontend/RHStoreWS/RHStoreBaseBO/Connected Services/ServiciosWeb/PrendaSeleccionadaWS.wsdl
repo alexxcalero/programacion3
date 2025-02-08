@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="softrh.services" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="PrendaSeleccionadaWS" targetNamespace="softrh.services" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/PrendaSeleccionadaWS?xsd=1" namespace="softrh.services" />
+    </xsd:schema>
+  </types>
+  <message name="modificarPrendaSeleccionada">
+    <part name="parameters" element="tns:modificarPrendaSeleccionada" />
+  </message>
+  <message name="modificarPrendaSeleccionadaResponse">
+    <part name="parameters" element="tns:modificarPrendaSeleccionadaResponse" />
+  </message>
+  <message name="obtenerPrendaSeleccionadaPorId">
+    <part name="parameters" element="tns:obtenerPrendaSeleccionadaPorId" />
+  </message>
+  <message name="obtenerPrendaSeleccionadaPorIdResponse">
+    <part name="parameters" element="tns:obtenerPrendaSeleccionadaPorIdResponse" />
+  </message>
+  <message name="aplicarCuponLista">
+    <part name="parameters" element="tns:aplicarCuponLista" />
+  </message>
+  <message name="aplicarCuponListaResponse">
+    <part name="parameters" element="tns:aplicarCuponListaResponse" />
+  </message>
+  <message name="listarPrendasIdCarrito">
+    <part name="parameters" element="tns:listarPrendasIdCarrito" />
+  </message>
+  <message name="listarPrendasIdCarritoResponse">
+    <part name="parameters" element="tns:listarPrendasIdCarritoResponse" />
+  </message>
+  <message name="insertarPrendaSeleccionada">
+    <part name="parameters" element="tns:insertarPrendaSeleccionada" />
+  </message>
+  <message name="insertarPrendaSeleccionadaResponse">
+    <part name="parameters" element="tns:insertarPrendaSeleccionadaResponse" />
+  </message>
+  <message name="eliminarPrendaSeleccionada">
+    <part name="parameters" element="tns:eliminarPrendaSeleccionada" />
+  </message>
+  <message name="eliminarPrendaSeleccionadaResponse">
+    <part name="parameters" element="tns:eliminarPrendaSeleccionadaResponse" />
+  </message>
+  <message name="listarPrendasIdOrden">
+    <part name="parameters" element="tns:listarPrendasIdOrden" />
+  </message>
+  <message name="listarPrendasIdOrdenResponse">
+    <part name="parameters" element="tns:listarPrendasIdOrdenResponse" />
+  </message>
+  <portType name="PrendaSeleccionadaWS">
+    <operation name="modificarPrendaSeleccionada">
+      <input wsam:Action="softrh.services/PrendaSeleccionadaWS/modificarPrendaSeleccionadaRequest" message="tns:modificarPrendaSeleccionada" />
+      <output wsam:Action="softrh.services/PrendaSeleccionadaWS/modificarPrendaSeleccionadaResponse" message="tns:modificarPrendaSeleccionadaResponse" />
+    </operation>
+    <operation name="obtenerPrendaSeleccionadaPorId">
+      <input wsam:Action="softrh.services/PrendaSeleccionadaWS/obtenerPrendaSeleccionadaPorIdRequest" message="tns:obtenerPrendaSeleccionadaPorId" />
+      <output wsam:Action="softrh.services/PrendaSeleccionadaWS/obtenerPrendaSeleccionadaPorIdResponse" message="tns:obtenerPrendaSeleccionadaPorIdResponse" />
+    </operation>
+    <operation name="aplicarCuponLista">
+      <input wsam:Action="softrh.services/PrendaSeleccionadaWS/aplicarCuponListaRequest" message="tns:aplicarCuponLista" />
+      <output wsam:Action="softrh.services/PrendaSeleccionadaWS/aplicarCuponListaResponse" message="tns:aplicarCuponListaResponse" />
+    </operation>
+    <operation name="listarPrendasIdCarrito">
+      <input wsam:Action="softrh.services/PrendaSeleccionadaWS/listarPrendasIdCarritoRequest" message="tns:listarPrendasIdCarrito" />
+      <output wsam:Action="softrh.services/PrendaSeleccionadaWS/listarPrendasIdCarritoResponse" message="tns:listarPrendasIdCarritoResponse" />
+    </operation>
+    <operation name="insertarPrendaSeleccionada">
+      <input wsam:Action="softrh.services/PrendaSeleccionadaWS/insertarPrendaSeleccionadaRequest" message="tns:insertarPrendaSeleccionada" />
+      <output wsam:Action="softrh.services/PrendaSeleccionadaWS/insertarPrendaSeleccionadaResponse" message="tns:insertarPrendaSeleccionadaResponse" />
+    </operation>
+    <operation name="eliminarPrendaSeleccionada">
+      <input wsam:Action="softrh.services/PrendaSeleccionadaWS/eliminarPrendaSeleccionadaRequest" message="tns:eliminarPrendaSeleccionada" />
+      <output wsam:Action="softrh.services/PrendaSeleccionadaWS/eliminarPrendaSeleccionadaResponse" message="tns:eliminarPrendaSeleccionadaResponse" />
+    </operation>
+    <operation name="listarPrendasIdOrden">
+      <input wsam:Action="softrh.services/PrendaSeleccionadaWS/listarPrendasIdOrdenRequest" message="tns:listarPrendasIdOrden" />
+      <output wsam:Action="softrh.services/PrendaSeleccionadaWS/listarPrendasIdOrdenResponse" message="tns:listarPrendasIdOrdenResponse" />
+    </operation>
+  </portType>
+  <binding name="PrendaSeleccionadaWSPortBinding" type="tns:PrendaSeleccionadaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="modificarPrendaSeleccionada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPrendaSeleccionadaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="aplicarCuponLista">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPrendasIdCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPrendaSeleccionada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPrendaSeleccionada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPrendasIdOrden">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PrendaSeleccionadaWS">
+    <port name="PrendaSeleccionadaWSPort" binding="tns:PrendaSeleccionadaWSPortBinding">
+      <soap:address location="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/PrendaSeleccionadaWS" />
+    </port>
+  </service>
+</definitions>

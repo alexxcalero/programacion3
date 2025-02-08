@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="softrh.services" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="UsuarioWS" targetNamespace="softrh.services" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/UsuarioWS?xsd=1" namespace="softrh.services" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerRolUsuario">
+    <part name="parameters" element="tns:obtenerRolUsuario" />
+  </message>
+  <message name="obtenerRolUsuarioResponse">
+    <part name="parameters" element="tns:obtenerRolUsuarioResponse" />
+  </message>
+  <message name="modificarUsuario">
+    <part name="parameters" element="tns:modificarUsuario" />
+  </message>
+  <message name="modificarUsuarioResponse">
+    <part name="parameters" element="tns:modificarUsuarioResponse" />
+  </message>
+  <message name="obtenerIdPorCorreo">
+    <part name="parameters" element="tns:obtenerIdPorCorreo" />
+  </message>
+  <message name="obtenerIdPorCorreoResponse">
+    <part name="parameters" element="tns:obtenerIdPorCorreoResponse" />
+  </message>
+  <message name="cambiarContrasenha">
+    <part name="parameters" element="tns:cambiarContrasenha" />
+  </message>
+  <message name="cambiarContrasenhaResponse">
+    <part name="parameters" element="tns:cambiarContrasenhaResponse" />
+  </message>
+  <message name="verificarContrasenha">
+    <part name="parameters" element="tns:verificarContrasenha" />
+  </message>
+  <message name="verificarContrasenhaResponse">
+    <part name="parameters" element="tns:verificarContrasenhaResponse" />
+  </message>
+  <message name="resetearContrasenha">
+    <part name="parameters" element="tns:resetearContrasenha" />
+  </message>
+  <message name="resetearContrasenhaResponse">
+    <part name="parameters" element="tns:resetearContrasenhaResponse" />
+  </message>
+  <message name="verificarIngresoUsuario">
+    <part name="parameters" element="tns:verificarIngresoUsuario" />
+  </message>
+  <message name="verificarIngresoUsuarioResponse">
+    <part name="parameters" element="tns:verificarIngresoUsuarioResponse" />
+  </message>
+  <portType name="UsuarioWS">
+    <operation name="obtenerRolUsuario">
+      <input wsam:Action="softrh.services/UsuarioWS/obtenerRolUsuarioRequest" message="tns:obtenerRolUsuario" />
+      <output wsam:Action="softrh.services/UsuarioWS/obtenerRolUsuarioResponse" message="tns:obtenerRolUsuarioResponse" />
+    </operation>
+    <operation name="modificarUsuario">
+      <input wsam:Action="softrh.services/UsuarioWS/modificarUsuarioRequest" message="tns:modificarUsuario" />
+      <output wsam:Action="softrh.services/UsuarioWS/modificarUsuarioResponse" message="tns:modificarUsuarioResponse" />
+    </operation>
+    <operation name="obtenerIdPorCorreo">
+      <input wsam:Action="softrh.services/UsuarioWS/obtenerIdPorCorreoRequest" message="tns:obtenerIdPorCorreo" />
+      <output wsam:Action="softrh.services/UsuarioWS/obtenerIdPorCorreoResponse" message="tns:obtenerIdPorCorreoResponse" />
+    </operation>
+    <operation name="cambiarContrasenha">
+      <input wsam:Action="softrh.services/UsuarioWS/cambiarContrasenhaRequest" message="tns:cambiarContrasenha" />
+      <output wsam:Action="softrh.services/UsuarioWS/cambiarContrasenhaResponse" message="tns:cambiarContrasenhaResponse" />
+    </operation>
+    <operation name="verificarContrasenha">
+      <input wsam:Action="softrh.services/UsuarioWS/verificarContrasenhaRequest" message="tns:verificarContrasenha" />
+      <output wsam:Action="softrh.services/UsuarioWS/verificarContrasenhaResponse" message="tns:verificarContrasenhaResponse" />
+    </operation>
+    <operation name="resetearContrasenha">
+      <input wsam:Action="softrh.services/UsuarioWS/resetearContrasenhaRequest" message="tns:resetearContrasenha" />
+      <output wsam:Action="softrh.services/UsuarioWS/resetearContrasenhaResponse" message="tns:resetearContrasenhaResponse" />
+    </operation>
+    <operation name="verificarIngresoUsuario">
+      <input wsam:Action="softrh.services/UsuarioWS/verificarIngresoUsuarioRequest" message="tns:verificarIngresoUsuario" />
+      <output wsam:Action="softrh.services/UsuarioWS/verificarIngresoUsuarioResponse" message="tns:verificarIngresoUsuarioResponse" />
+    </operation>
+  </portType>
+  <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerRolUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerIdPorCorreo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarContrasenha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarContrasenha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="resetearContrasenha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarIngresoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UsuarioWS">
+    <port name="UsuarioWSPort" binding="tns:UsuarioWSPortBinding">
+      <soap:address location="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/UsuarioWS" />
+    </port>
+  </service>
+</definitions>

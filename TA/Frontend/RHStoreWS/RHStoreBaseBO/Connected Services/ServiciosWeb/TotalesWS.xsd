@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="softrh.services" targetNamespace="softrh.services" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="obtenerValoresTotales" type="tns:obtenerValoresTotales" />
+  <xs:element name="obtenerValoresTotalesPorMes" type="tns:obtenerValoresTotalesPorMes" />
+  <xs:element name="obtenerValoresTotalesPorMesResponse" type="tns:obtenerValoresTotalesPorMesResponse" />
+  <xs:element name="obtenerValoresTotalesResponse" type="tns:obtenerValoresTotalesResponse" />
+  <xs:complexType name="obtenerValoresTotalesPorMes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+      <xs:element name="arg1" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerValoresTotalesPorMesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:totales" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="totales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientesActivos" type="xs:int" />
+      <xs:element minOccurs="0" name="cuponesActivos" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idTotal" type="xs:int" />
+      <xs:element minOccurs="0" name="promocionesActivas" type="xs:int" />
+      <xs:element minOccurs="0" name="totalPrendas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerValoresTotales">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerValoresTotalesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:totales" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

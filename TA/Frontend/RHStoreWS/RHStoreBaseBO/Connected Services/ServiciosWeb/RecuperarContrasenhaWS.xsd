@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="softrh.services" targetNamespace="softrh.services" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="guardarToken" type="tns:guardarToken" />
+  <xs:element name="guardarTokenResponse" type="tns:guardarTokenResponse" />
+  <xs:element name="obtenerIdUsuarioPorToken" type="tns:obtenerIdUsuarioPorToken" />
+  <xs:element name="obtenerIdUsuarioPorTokenResponse" type="tns:obtenerIdUsuarioPorTokenResponse" />
+  <xs:complexType name="obtenerIdUsuarioPorToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerIdUsuarioPorTokenResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="guardarToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="guardarTokenResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

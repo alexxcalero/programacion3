@@ -1,0 +1,600 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Cliente.master.cs" Inherits="RHStoreWS.Cliente.Cliente" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <!-- Inclusión de Bootstrap CSS y Font Awesome -->
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/styles.css" rel="stylesheet" />
+    <link href="../Content/Fonts/css/all.css" rel="stylesheet" />
+    <!-- Inclusión de jQuery y Bootstrap JS -->
+    <script src="../Scripts/jquery-3.7.1.js"></script>
+    <script src="../Scripts/bootstrap.bundle.js"></script>
+    <title>RH Store</title>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style>
+        /* Fondo del rectángulo en el encabezado */
+        .header-background {
+    position: relative; /* El logo se posicionará dentro de este contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 184px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+
+        /* Contenedor del contenido dentro del rectángulo */
+        .header-content-container {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            top: -14px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e6e6e6;
+        }
+        .logo {
+    position: absolute; /* Posición fija dentro de su contenedor */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde el lado izquierdo */
+    width: 150px; /* Tamaño del logo */
+    z-index: 1010; /* Asegúrate de que esté encima de otros elementos */
+}
+
+        .nav-container {
+            width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 100px;
+            margin-left: 180px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #538f95;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .header-content2 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            right: 115px;
+            top: 20px;
+        }
+        .header-content-container {
+    display: flex;
+    justify-content: space-between; /* Asegura el espacio uniforme */
+    align-items: center;
+    width: 100%; /* Extiende el contenedor */
+    position: relative; /* Evita que los elementos se superpongan */
+    padding: 10px 20px; /* Añade espacio interno en los bordes */
+}
+
+
+        .search-container {
+            margin-right: 260px;
+            display: flex;
+            align-items: center;
+            margin-top: 31px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-container input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        .search-container button {
+            padding: 10px 15px; /* Define un área clicable clara */
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-container button:hover {
+            background-color: #495057;
+        }
+
+        .user-options {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-options a {
+            margin-top: 40px;
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .user-options a:hover {
+            color: #538f95;
+        }
+
+        .container {
+    display: flex; /* Mantén el contenedor en modo flex para alinear horizontalmente filtros y productos */
+    flex-direction: row; /* Alineación horizontal */
+    gap: 20px; /* Espacio entre filtros y productos */
+    margin: 20px; /* Margen alrededor del contenedor */
+    align-items: flex-start; /* Alinea verticalmente al inicio */
+}
+
+.filters {
+    width: 250px; /* Ancho fijo de la sección de filtros */
+    display: flex;
+    flex-direction: column; /* Asegura que los filtros estén apilados verticalmente */
+    gap: 20px; /* Espacio entre cada filtro */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+}
+
+.filter-box {
+    padding: 15px;
+    border: 1px solid #ccc; /* Borde de cada caja de filtro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.filter-box h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.filter-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.products {
+    flex: 1; /* Productos ocupan el espacio restante */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre los productos */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo opcional */
+    border-radius: 5px;
+}
+
+
+        .filters {
+    flex: 1; /* Ocupa el menor espacio posible */
+    display: flex;
+    flex-direction: column; /* Asegura que las secciones dentro estén en columna */
+    gap: 20px; /* Espacio entre las cajas dentro de filtros */
+    max-width: 300px; /* Ancho máximo de los filtros */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+}
+
+.filter-box {
+    padding: 15px;
+    border: 1px solid #ccc; /* Borde de cada caja */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos dentro estén en columna */
+}
+
+.filter-box h5 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 16px;
+    color: #333; /* Color del título */
+}
+
+.filter-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no rompa el diseño */
+}
+
+.btn-filtrar {
+    display: block;
+    width: 100%; /* Botón ocupa todo el ancho */
+    text-align: center; /* Centrar texto */
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.btn-filtrar:hover {
+    background-color: #495057;
+}
+
+
+        /*PARA LAS VISTAS*/
+         .view-toggle {
+            display: flex;
+            justify-content: right;
+            margin: 10px 0;
+            margin-right: 10px;
+        }
+
+        .btn-toggle {
+            padding: 8px 16px;
+            margin: 0 5px;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-toggle:hover {
+            background-color: #495057;
+        }
+        .products {
+        flex: 3; /* Ocupa el resto del espacio */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas para productos */
+        gap: 20px; /* Espacio entre los productos */
+        padding: 20px;
+    }
+        /*vistas*/
+        /* Vista de cuadrícula: Mostrar solo imágenes sin detalles */
+        .products.grid-view {
+            grid-template-columns: repeat(4, 1fr); /* Ajusta el número de columnas como prefieras */
+        }
+        .products.grid-view .product {
+            text-align: center;
+        }
+        .products.grid-view .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .products.grid-view .product p {
+            display: none; /* Ocultar texto */
+        }
+
+        /* Vista de detalle: Mostrar imagen con detalles */
+        .products.detail-view {
+            grid-template-columns: repeat(3, 1fr); /* Ajusta el número de columnas como prefieras */
+        }
+        .products.detail-view .product {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .products.detail-view .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .products.detail-view .product p {
+            display: block; /* Mostrar detalles */
+            margin: 5px 0; /* Espacio entre las líneas de detalle */
+        }
+
+        /* Vista de mosaico: Imágenes más grandes, solo con precio */
+        .products.mosaic-view {
+            grid-template-columns: repeat(1, 1fr); /* Ajusta el número de columnas como prefieras */
+        }
+        .products.mosaic-view .product {
+            text-align: center;
+        }
+        .products.mosaic-view .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .products.mosaic-view .product p:not(:nth-child(2)) {
+            display: none; /* Mostrar solo el precio */
+        }
+        /*HASTA ACA*/
+        .product {
+            position: relative;
+            text-align: center;
+        }
+
+        .product img {
+            width: 200px;
+            height: auto; /* Mantener la relación de aspecto */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /*.add-to-cart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #538f95;
+        }
+            */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #538f95;
+        }
+
+        .custom-position {
+            position: absolute; /* Usa posición absoluta para colocarlo en un lugar exacto */
+            top: 50px; /* Ajusta el valor para moverlo hacia abajo */
+            right: 111px; /* Ajusta el valor para moverlo hacia la izquierda */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos si es necesario */
+        }
+        /* Estilo para ajustar la posición del dropdown */
+.custom-position {
+    position: absolute; /* Permite posicionarlo de manera absoluta */
+    top: 49px; /* Ajusta la distancia vertical desde la parte superior del contenedor */
+    right: 100px; /* Reduce el margen hacia la derecha para alinear mejor */
+    z-index: 1000; /* Mantiene el dropdown sobre otros elementos */
+    transition: transform 0.3s ease; /* Agrega suavidad a cualquier cambio de posición */
+    padding: 5px; /* Opcional: ajusta el espacio interno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-buscar, .btn-filtrar {
+    background-color: #000000; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Efecto de transición */
+    padding: 10px 15px; /* Espaciado interno */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.btn-buscar:hover, .btn-filtrar:hover {
+    background-color: #495057; /* Color al pasar el mouse */
+    color: white; /* Asegura que el texto siga siendo legible */
+    text-decoration: none; /* Asegura que no haya subrayado al hacer hover */
+}
+.main-container {
+    max-width: 1200px; /* Define un ancho máximo uniforme */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 0 20px; /* Añade espacio interno */
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Asegura que las imágenes sean responsivas */
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 0 10px; /* Reduce el espacio interno en pantallas pequeñas */
+    }
+}
+
+    /* Contenedor del dropdown del usuario */
+.custom-position {
+    position: absolute; /* Permite posicionar en cualquier lugar */
+    top: 45px; /* Ajusta la distancia desde la parte superior */
+    right: 110px; /* Ajusta la distancia desde la derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex; /* Centra los elementos */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo del botón */
+.btn-outline-light {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #fff; /* Borde blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de la fuente */
+    transition: all 0.3s ease; /* Animación para hover */
+}
+
+/* Hover para el botón */
+.btn-outline-light:hover {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    border: 1px solid #000; /* Borde negro */
+}
+
+/* Estilo del menú dropdown */
+.dropdown-menu {
+    background-color: #f8f9fa; /* Fondo claro */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 10px; /* Espaciado entre el botón y el menú */
+}
+
+/* Elementos del menú */
+.dropdown-menu .dropdown-item {
+    color: #000; /* Texto negro */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de la fuente */
+    transition: background-color 0.3s ease; /* Animación para hover */
+}
+
+/* Hover para los ítems del menú */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e9ecef; /* Fondo gris claro */
+    color: #000; /* Texto negro */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .custom-position {
+        top: 10px; /* Reduce la distancia en pantallas pequeñas */
+        right: 10px;
+    }
+    .btn-outline-light {
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+        padding: 8px 12px; /* Reduce el espaciado */
+    }
+}
+
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <!-- Fondo del rectángulo -->
+    <div class="header-background">
+        <!-- Contenido dentro del rectángulo -->
+        <div class="header-content-container">
+
+            <div class="logo">
+                <a href="ClienteHome.aspx"><img src="../Images/logo2.png" alt="Logo" class="logo" /></a>
+            </div>
+                        <!-- Conditional navigation based on ShowFullNav -->
+            <asp:Panel ID="navContainer" runat="server">
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><asp:LinkButton ID="btnInicio" runat="server" OnClick="btnInicio_Click">INICIO</asp:LinkButton></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Ver el perfil -->
+            <!-- Mostrar el nombre del usuario si está en sesión -->
+                <asp:Panel ID="pnlUserLoggedIn" runat="server" Visible="false">
+                        <div class="dropdown custom-position">
+                                <button class="btn btn-outline-light dropdown-toggle" id="btnUsuario" data-bs-toggle="dropdown" type="button">
+                                    <asp:Label ID="lblNombreCliente" runat="server"></asp:Label>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnUsuario">
+                                    <li><a class="dropdown-item" href="PerfilCliente.aspx">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="../Admin/ModificarContrasenha.aspx">Cambiar Contraseña</a></li>
+                                    <li><a class="dropdown-item" href="../Admin/IniciarSesion.aspx">Cerrar Sesión</a></li>
+                                </ul>
+                            </div>
+                    </asp:Panel>
+
+            <div class="header-content">
+                <div class="search-container">
+                    <asp:TextBox ID="txtBuscar" runat="server" CssClass="form-control" placeholder="Buscar productos..." />
+                    <asp:LinkButton ID="lbBuscar" runat="server" Text="Buscar" OnClick="lbBuscar_Click" CssClass="btn-buscar" />
+                </div>
+            </div>
+            </asp:Panel>
+            <!-- Carrito: Siempre visible -->
+            <asp:Panel ID="pnlCarrito" runat="server" Visible="true">
+                <div class="header-content">
+                    <div class="user-options">
+                        
+                        <asp:LinkButton ID="btnCarrito" runat="server" OnClick="btnCarrito_Click">CARRITO</asp:LinkButton>
+                    </div>
+                </div>
+            </asp:Panel>
+            <!-- Botón de Iniciar Sesión si el usuario no ha iniciado sesión -->
+            <asp:Panel ID="pnlLogin" runat="server" Visible="true">
+                <div class="header-content2">
+                    <di class="user-options">
+                        <asp:LinkButton ID="btnIniciarSesion" runat="server" OnClick="btnIniciarSesion_Click">INICIAR SESIÓN</asp:LinkButton>
+                    </div>
+                </div>
+            </asp:Panel>
+        </div>
+    </div>
+        </header>
+       
+        <div>
+            <asp:ContentPlaceHolder ID="contenidoPagina" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <main>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+        <footer>
+            <p>&copy; 2024 RH Store. Todos los derechos reservados.</p>
+        </footer>
+    </form>
+</body>
+</html>

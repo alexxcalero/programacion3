@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="6417066e-ad81-464c-b621-0fbfcc280672" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://54.89.220.117:8080/SoftRHWS/archivo.disco" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PrendaSeleccionadaWS.wsdl" MetadataType="Wsdl" ID="a8eb264a-a66c-4e3f-b52e-cf68adb9aa08" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/PrendaSeleccionadaWS?WSDL" />
+    <MetadataFile FileName="TotalesWS.xsd" MetadataType="Schema" ID="0df90583-6a4e-4193-b501-cd3721c096f1" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/TotalesWS?xsd=1" />
+    <MetadataFile FileName="TrabajadorWS.wsdl" MetadataType="Wsdl" ID="c5051de3-aadd-41c2-acd2-7b387c481adf" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/TrabajadorWS?WSDL" />
+    <MetadataFile FileName="PromocionWS.wsdl" MetadataType="Wsdl" ID="1db6db21-bd9f-4978-8409-ed0d3f593810" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/PromocionWS?WSDL" />
+    <MetadataFile FileName="OrdenCompraWS.wsdl" MetadataType="Wsdl" ID="080de802-1b6f-4465-ad0b-8e044d86d522" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/OrdenCompraWS?WSDL" />
+    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="d1427998-2fdd-4e4b-8b0d-f1b57ace86e4" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/UsuarioWS?xsd=1" />
+    <MetadataFile FileName="RecuperarContrasenhaWS.wsdl" MetadataType="Wsdl" ID="907f6e3f-4e82-4941-8d8e-37bd736aae73" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/RecuperarContrasenhaWS?WSDL" />
+    <MetadataFile FileName="DireccionWS.wsdl" MetadataType="Wsdl" ID="cdbba191-a3b0-401f-b60c-376a50396e9d" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/DireccionWS?WSDL" />
+    <MetadataFile FileName="AdministradorWS.wsdl" MetadataType="Wsdl" ID="5baf5117-bc70-4c44-8807-f4b05d2b5f49" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/AdministradorWS?WSDL" />
+    <MetadataFile FileName="CuponWS.wsdl" MetadataType="Wsdl" ID="e431d4a9-b71a-4315-ad44-868c3255ac35" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/CuponWS?WSDL" />
+    <MetadataFile FileName="CuponWS.xsd" MetadataType="Schema" ID="369a3ae5-8ba1-4c6a-9bbf-aacc191ab285" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/CuponWS?xsd=1" />
+    <MetadataFile FileName="CarritoWS.xsd" MetadataType="Schema" ID="2297e4b2-88d4-4c87-9d54-3b0747f92015" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/CarritoWS?xsd=1" />
+    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="e5d5c27b-cb1c-4694-9361-56b660a2dd8e" SourceId="1" SourceUrl="http://54.89.220.117:8080/SoftRHWS/archivo.disco" />
+    <MetadataFile FileName="ClienteWS.wsdl" MetadataType="Wsdl" ID="a29b0c07-4702-4b3e-8fab-373dbf45a009" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/ClienteWS?WSDL" />
+    <MetadataFile FileName="AdministradorWS.xsd" MetadataType="Schema" ID="7097c2cf-7142-4b4b-9238-14fbc6e8b08c" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/AdministradorWS?xsd=1" />
+    <MetadataFile FileName="RecuperarContrasenhaWS.xsd" MetadataType="Schema" ID="139f9f92-bc4b-4b58-920c-8f9bfcd8f78d" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/RecuperarContrasenhaWS?xsd=1" />
+    <MetadataFile FileName="PrendaWS.xsd" MetadataType="Schema" ID="a6dc7cae-441f-45ad-b4ff-854198aec403" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/PrendaWS?xsd=1" />
+    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="79e01c5c-2912-461d-954a-bcf01873b60e" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/UsuarioWS?WSDL" />
+    <MetadataFile FileName="TrabajadorWS.xsd" MetadataType="Schema" ID="d749ec62-083e-471f-8505-baa4abb62dd5" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/TrabajadorWS?xsd=1" />
+    <MetadataFile FileName="OrdenCompraWS.xsd" MetadataType="Schema" ID="656a67ce-5dce-411d-95e2-9987e4a109a5" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/OrdenCompraWS?xsd=1" />
+    <MetadataFile FileName="TotalesWS.wsdl" MetadataType="Wsdl" ID="85600881-f293-408a-a6b5-e968290b3a71" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/TotalesWS?WSDL" />
+    <MetadataFile FileName="PromocionWS.xsd" MetadataType="Schema" ID="e8acd0ee-cfbd-491e-a9bf-6c21b79790fb" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/PromocionWS?xsd=1" />
+    <MetadataFile FileName="DireccionWS.xsd" MetadataType="Schema" ID="767434de-5ec6-4143-91b2-f43303aa97f3" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/DireccionWS?xsd=1" />
+    <MetadataFile FileName="PrendaSeleccionadaWS.xsd" MetadataType="Schema" ID="18739f34-b8bb-4e73-82d6-77a4ad094822" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/PrendaSeleccionadaWS?xsd=1" />
+    <MetadataFile FileName="ClienteWS.xsd" MetadataType="Schema" ID="bf23ed7a-a504-4f5f-8a4d-64562ad541c3" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/ClienteWS?xsd=1" />
+    <MetadataFile FileName="PrendaWS.wsdl" MetadataType="Wsdl" ID="3a28adcc-c157-49f6-a694-4d75b7196509" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/PrendaWS?WSDL" />
+    <MetadataFile FileName="CarritoWS.wsdl" MetadataType="Wsdl" ID="01432fac-05cd-4a15-9e7f-f840d5010318" SourceId="1" SourceUrl="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/CarritoWS?WSDL" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

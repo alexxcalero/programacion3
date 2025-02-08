@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="softrh.services" targetNamespace="softrh.services" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarPrenda" type="tns:eliminarPrenda" />
+  <xs:element name="eliminarPrendaResponse" type="tns:eliminarPrendaResponse" />
+  <xs:element name="insertarPrenda" type="tns:insertarPrenda" />
+  <xs:element name="insertarPrendaResponse" type="tns:insertarPrendaResponse" />
+  <xs:element name="listarPrendasFiltradas" type="tns:listarPrendasFiltradas" />
+  <xs:element name="listarPrendasFiltradasResponse" type="tns:listarPrendasFiltradasResponse" />
+  <xs:element name="listarPrendasPorGenero" type="tns:listarPrendasPorGenero" />
+  <xs:element name="listarPrendasPorGeneroResponse" type="tns:listarPrendasPorGeneroResponse" />
+  <xs:element name="listarPrendasPorNombreDescripcion" type="tns:listarPrendasPorNombreDescripcion" />
+  <xs:element name="listarPrendasPorNombreDescripcionResponse" type="tns:listarPrendasPorNombreDescripcionResponse" />
+  <xs:element name="listarPrendasTodas" type="tns:listarPrendasTodas" />
+  <xs:element name="listarPrendasTodasResponse" type="tns:listarPrendasTodasResponse" />
+  <xs:element name="modificarPrenda" type="tns:modificarPrenda" />
+  <xs:element name="modificarPrendaResponse" type="tns:modificarPrendaResponse" />
+  <xs:element name="obtenerColoresPorPrenda" type="tns:obtenerColoresPorPrenda" />
+  <xs:element name="obtenerColoresPorPrendaResponse" type="tns:obtenerColoresPorPrendaResponse" />
+  <xs:element name="obtenerColoresUnicos" type="tns:obtenerColoresUnicos" />
+  <xs:element name="obtenerColoresUnicosResponse" type="tns:obtenerColoresUnicosResponse" />
+  <xs:element name="obtenerImagenPorId" type="tns:obtenerImagenPorId" />
+  <xs:element name="obtenerImagenPorIdResponse" type="tns:obtenerImagenPorIdResponse" />
+  <xs:element name="obtenerPrendaPorId" type="tns:obtenerPrendaPorId" />
+  <xs:element name="obtenerPrendaPorIdResponse" type="tns:obtenerPrendaPorIdResponse" />
+  <xs:element name="obtenerTallasPorPrenda" type="tns:obtenerTallasPorPrenda" />
+  <xs:element name="obtenerTallasPorPrendaResponse" type="tns:obtenerTallasPorPrendaResponse" />
+  <xs:element name="obtenerTallasUnicas" type="tns:obtenerTallasUnicas" />
+  <xs:element name="obtenerTallasUnicasResponse" type="tns:obtenerTallasUnicasResponse" />
+  <xs:complexType name="listarPrendasTodas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPrendasTodasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cantVendida" type="xs:int" />
+      <xs:element minOccurs="0" name="color" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="genero" type="tns:genero" />
+      <xs:element minOccurs="0" name="idPrenda" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="precioDescontado" type="xs:double" />
+      <xs:element minOccurs="0" name="precioOriginal" type="xs:double" />
+      <xs:element minOccurs="0" name="stock" type="xs:int" />
+      <xs:element minOccurs="0" name="talla" type="tns:talla" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoPrenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerImagenPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerImagenPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPrenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPrendaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasFiltradas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:double" />
+      <xs:element minOccurs="0" name="arg1" type="xs:double" />
+      <xs:element name="arg2" type="xs:boolean" />
+      <xs:element name="arg3" type="xs:boolean" />
+      <xs:element name="arg4" type="xs:boolean" />
+      <xs:element minOccurs="0" name="arg5" type="xs:string" />
+      <xs:element minOccurs="0" name="arg6" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasFiltradasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasPorGenero">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasPorGeneroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element minOccurs="0" name="arg3" type="tns:tipoPrenda" />
+      <xs:element minOccurs="0" name="arg4" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="arg5" type="tns:talla" />
+      <xs:element minOccurs="0" name="arg6" type="tns:genero" />
+      <xs:element minOccurs="0" name="arg7" type="xs:string" />
+      <xs:element minOccurs="0" name="arg8" type="xs:double" />
+      <xs:element minOccurs="0" name="arg9" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrendaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasPorNombreDescripcion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrendasPorNombreDescripcionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerColoresUnicos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerColoresUnicosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrendaPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrendaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:prenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPrenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="tns:tipoPrenda" />
+      <xs:element minOccurs="0" name="arg3" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="arg4" type="tns:talla" />
+      <xs:element minOccurs="0" name="arg5" type="tns:genero" />
+      <xs:element minOccurs="0" name="arg6" type="xs:string" />
+      <xs:element minOccurs="0" name="arg7" type="xs:double" />
+      <xs:element minOccurs="0" name="arg8" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPrendaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTallasUnicas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerTallasUnicasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTallasPorPrenda">
+    <xs:sequence>
+      <xs:element name="idPrenda" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTallasPorPrendaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerColoresPorPrenda">
+    <xs:sequence>
+      <xs:element name="idPrenda" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerColoresPorPrendaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="genero">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Hombre" />
+      <xs:enumeration value="Mujer" />
+      <xs:enumeration value="Unisex" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="talla">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="XS" />
+      <xs:enumeration value="S" />
+      <xs:enumeration value="M" />
+      <xs:enumeration value="L" />
+      <xs:enumeration value="XL" />
+      <xs:enumeration value="XXL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoPrenda">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Polo" />
+      <xs:enumeration value="Pantalon" />
+      <xs:enumeration value="Polera" />
+      <xs:enumeration value="Camisa" />
+      <xs:enumeration value="Casaca" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

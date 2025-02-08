@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="softrh.services" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="DireccionWS" targetNamespace="softrh.services" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/DireccionWS?xsd=1" namespace="softrh.services" />
+    </xsd:schema>
+  </types>
+  <message name="listarDireccionesPorIdCliente">
+    <part name="parameters" element="tns:listarDireccionesPorIdCliente" />
+  </message>
+  <message name="listarDireccionesPorIdClienteResponse">
+    <part name="parameters" element="tns:listarDireccionesPorIdClienteResponse" />
+  </message>
+  <message name="eliminarDireccion">
+    <part name="parameters" element="tns:eliminarDireccion" />
+  </message>
+  <message name="eliminarDireccionResponse">
+    <part name="parameters" element="tns:eliminarDireccionResponse" />
+  </message>
+  <message name="insertarDireccion">
+    <part name="parameters" element="tns:insertarDireccion" />
+  </message>
+  <message name="insertarDireccionResponse">
+    <part name="parameters" element="tns:insertarDireccionResponse" />
+  </message>
+  <message name="modificarDireccion">
+    <part name="parameters" element="tns:modificarDireccion" />
+  </message>
+  <message name="modificarDireccionResponse">
+    <part name="parameters" element="tns:modificarDireccionResponse" />
+  </message>
+  <message name="obtenerDireccionPorId">
+    <part name="parameters" element="tns:obtenerDireccionPorId" />
+  </message>
+  <message name="obtenerDireccionPorIdResponse">
+    <part name="parameters" element="tns:obtenerDireccionPorIdResponse" />
+  </message>
+  <message name="listarDireccionesTodas">
+    <part name="parameters" element="tns:listarDireccionesTodas" />
+  </message>
+  <message name="listarDireccionesTodasResponse">
+    <part name="parameters" element="tns:listarDireccionesTodasResponse" />
+  </message>
+  <portType name="DireccionWS">
+    <operation name="listarDireccionesPorIdCliente">
+      <input wsam:Action="softrh.services/DireccionWS/listarDireccionesPorIdClienteRequest" message="tns:listarDireccionesPorIdCliente" />
+      <output wsam:Action="softrh.services/DireccionWS/listarDireccionesPorIdClienteResponse" message="tns:listarDireccionesPorIdClienteResponse" />
+    </operation>
+    <operation name="eliminarDireccion">
+      <input wsam:Action="softrh.services/DireccionWS/eliminarDireccionRequest" message="tns:eliminarDireccion" />
+      <output wsam:Action="softrh.services/DireccionWS/eliminarDireccionResponse" message="tns:eliminarDireccionResponse" />
+    </operation>
+    <operation name="insertarDireccion">
+      <input wsam:Action="softrh.services/DireccionWS/insertarDireccionRequest" message="tns:insertarDireccion" />
+      <output wsam:Action="softrh.services/DireccionWS/insertarDireccionResponse" message="tns:insertarDireccionResponse" />
+    </operation>
+    <operation name="modificarDireccion">
+      <input wsam:Action="softrh.services/DireccionWS/modificarDireccionRequest" message="tns:modificarDireccion" />
+      <output wsam:Action="softrh.services/DireccionWS/modificarDireccionResponse" message="tns:modificarDireccionResponse" />
+    </operation>
+    <operation name="obtenerDireccionPorId">
+      <input wsam:Action="softrh.services/DireccionWS/obtenerDireccionPorIdRequest" message="tns:obtenerDireccionPorId" />
+      <output wsam:Action="softrh.services/DireccionWS/obtenerDireccionPorIdResponse" message="tns:obtenerDireccionPorIdResponse" />
+    </operation>
+    <operation name="listarDireccionesTodas">
+      <input wsam:Action="softrh.services/DireccionWS/listarDireccionesTodasRequest" message="tns:listarDireccionesTodas" />
+      <output wsam:Action="softrh.services/DireccionWS/listarDireccionesTodasResponse" message="tns:listarDireccionesTodasResponse" />
+    </operation>
+  </portType>
+  <binding name="DireccionWSPortBinding" type="tns:DireccionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarDireccionesPorIdCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarDireccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarDireccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarDireccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerDireccionPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDireccionesTodas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DireccionWS">
+    <port name="DireccionWSPort" binding="tns:DireccionWSPortBinding">
+      <soap:address location="http://ec2-54-89-220-117.compute-1.amazonaws.com:8080/SoftRHWS/DireccionWS" />
+    </port>
+  </service>
+</definitions>
