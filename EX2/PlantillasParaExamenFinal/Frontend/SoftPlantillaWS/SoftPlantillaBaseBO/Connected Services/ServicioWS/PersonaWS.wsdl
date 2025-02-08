@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="softplantilla.services" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="PersonaWS" targetNamespace="softplantilla.services" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftPlantillaWS/PersonaWS?xsd=1" namespace="softplantilla.services" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerPersonaPorId">
+    <part name="parameters" element="tns:obtenerPersonaPorId" />
+  </message>
+  <message name="obtenerPersonaPorIdResponse">
+    <part name="parameters" element="tns:obtenerPersonaPorIdResponse" />
+  </message>
+  <message name="listarPersonasTodas">
+    <part name="parameters" element="tns:listarPersonasTodas" />
+  </message>
+  <message name="listarPersonasTodasResponse">
+    <part name="parameters" element="tns:listarPersonasTodasResponse" />
+  </message>
+  <message name="eliminarPersona">
+    <part name="parameters" element="tns:eliminarPersona" />
+  </message>
+  <message name="eliminarPersonaResponse">
+    <part name="parameters" element="tns:eliminarPersonaResponse" />
+  </message>
+  <message name="modificarPersona">
+    <part name="parameters" element="tns:modificarPersona" />
+  </message>
+  <message name="modificarPersonaResponse">
+    <part name="parameters" element="tns:modificarPersonaResponse" />
+  </message>
+  <message name="insertarPersona">
+    <part name="parameters" element="tns:insertarPersona" />
+  </message>
+  <message name="insertarPersonaResponse">
+    <part name="parameters" element="tns:insertarPersonaResponse" />
+  </message>
+  <portType name="PersonaWS">
+    <operation name="obtenerPersonaPorId">
+      <input wsam:Action="softplantilla.services/PersonaWS/obtenerPersonaPorIdRequest" message="tns:obtenerPersonaPorId" />
+      <output wsam:Action="softplantilla.services/PersonaWS/obtenerPersonaPorIdResponse" message="tns:obtenerPersonaPorIdResponse" />
+    </operation>
+    <operation name="listarPersonasTodas">
+      <input wsam:Action="softplantilla.services/PersonaWS/listarPersonasTodasRequest" message="tns:listarPersonasTodas" />
+      <output wsam:Action="softplantilla.services/PersonaWS/listarPersonasTodasResponse" message="tns:listarPersonasTodasResponse" />
+    </operation>
+    <operation name="eliminarPersona">
+      <input wsam:Action="softplantilla.services/PersonaWS/eliminarPersonaRequest" message="tns:eliminarPersona" />
+      <output wsam:Action="softplantilla.services/PersonaWS/eliminarPersonaResponse" message="tns:eliminarPersonaResponse" />
+    </operation>
+    <operation name="modificarPersona">
+      <input wsam:Action="softplantilla.services/PersonaWS/modificarPersonaRequest" message="tns:modificarPersona" />
+      <output wsam:Action="softplantilla.services/PersonaWS/modificarPersonaResponse" message="tns:modificarPersonaResponse" />
+    </operation>
+    <operation name="insertarPersona">
+      <input wsam:Action="softplantilla.services/PersonaWS/insertarPersonaRequest" message="tns:insertarPersona" />
+      <output wsam:Action="softplantilla.services/PersonaWS/insertarPersonaResponse" message="tns:insertarPersonaResponse" />
+    </operation>
+  </portType>
+  <binding name="PersonaWSPortBinding" type="tns:PersonaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerPersonaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPersonasTodas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PersonaWS">
+    <port name="PersonaWSPort" binding="tns:PersonaWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftPlantillaWS/PersonaWS" />
+    </port>
+  </service>
+</definitions>

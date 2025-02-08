@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="SoftPlantillaWS.MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link href="Content/bootstrap.css" rel="stylesheet" />
+	<link href="Content/site.css" rel="stylesheet" />
+	<link href="Content/Fonts/css/all.css" rel="stylesheet" />
+
+	<script src="Scripts/bootstrap.js"></script>
+	<script src="Scripts/bootstrap.bundle.js"></script>
+	<script src="Scripts/jquery-3.7.1.js"></script>
+
+	<style>
+		/* Asegura que el contenedor del contenido ocupe todo el espacio disponible y solo él tenga scroll */
+		.contenido-scroll {
+			height: calc(100vh - 56px); /* Ajusta la altura, considerando la barra de navegación */
+			overflow-y: auto;
+		}
+	</style>
+
+	<title>
+		<asp:ContentPlaceHolder ID="cphTitulo" runat="server"></asp:ContentPlaceHolder>
+	</title>
+
+	<asp:ContentPlaceHolder ID="cphScripts" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+	<div class="container-fluid d-flex p-0 h-100">
+		<!-- Menu Lateral -->
+		<div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-primary text-white offcanvas-md offcanvas-start">
+			<a href="Home.aspx" class="navbar-brand">
+				<img src="Images/pucp.png" width="150" />
+			</a>
+			<hr />
+			<!-- Revisar que opciones tenemos -->
+			<ul class="mynav nav nav-pills flex-column mb-auto">
+				<li class="sidebar-item nav-item mb-1">
+					<a href="Plantilla1.aspx"><i class="fa-solid fa-list"></i>
+						CAMBIAR EL NOMBRE 1
+					</a>
+				</li>
+				<li class="sidebar-item nav-item mb-1">
+					<a href="Plantilla2.aspx"><i class="fa-solid fa-list"></i>
+						CAMBIAR EL NOMBRE 2
+					</a>
+				</li>
+				<li class="sidebar-item nav-item mb-1">
+					<a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#settings" aria-expanded="false" aria-controls="settings"><i class="fa-solid fa-list"></i>
+						CAMBIAR EL NOMBRE 3
+					</a>
+					<ul id="settings" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+						<li class="sidebar-item">
+							<a href="Plantilla31.aspx" class="sidebar-link"><i class="fa-solid fa-star"></i>
+								<span class="topic">CAMBIAR EL NOMBRE 3.1</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a href="Plantilla32.aspx" class="sidebar-link"><i class="fa-solid fa-star"></i>
+								<span class="topic">CAMBIAR EL NOMBRE 3.2</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<hr />
+			<div class="d-flex">
+				<i class="fa-solid fa-book me-2"></i>
+				<h6 class="mt-1 mb-0">PUCP - Programación 3</h6>
+			</div>
+		</div>
+		<!-- Contenido de la Derecha -->
+		<div class="bg-light flex-fill">
+			<!-- Barra superior para dispositivos móviles -->
+			<div class="p-2 d-md-none d-flex text-white bg-primary">
+				<a data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" class="text-white" href="#">
+					<i class="fa-solid fa-bars"></i>
+				</a>
+			</div>
+			<!-- Barra de Usuario -->
+			<nav class="navbar navbar-dark bg-primary">
+				<div class="container-fluid">
+					<a class="navbar-brand d-sm-none d-md-block d-none d-sm-block">Software para el Curso de Programación 3
+					</a>
+					<form class="d-flex">
+						<div class="dropdown ps-3">
+							<button class="btn btn-outline-light dropdown-toggle" id="btnUsuario" data-bs-toggle="dropdown" type="button" aria-expanded="false">
+								<i class="fas fa-user me-2"></i>Juan Perez
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="btnUsuario">
+								<li><a class="dropdown-item" href="#">Perfil</a></li>
+								<li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
+								<li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+							</ul>
+						</div>
+					</form>
+				</div>
+			</nav>
+			<!-- Contenido -->
+			<div class="contenido-scroll p-4">
+				<form runat="server">
+					<asp:ContentPlaceHolder ID="cphContenido" runat="server"></asp:ContentPlaceHolder>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

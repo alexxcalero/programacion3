@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="softplantilla.services" targetNamespace="softplantilla.services" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarPersona" type="tns:eliminarPersona" />
+  <xs:element name="eliminarPersonaResponse" type="tns:eliminarPersonaResponse" />
+  <xs:element name="insertarPersona" type="tns:insertarPersona" />
+  <xs:element name="insertarPersonaResponse" type="tns:insertarPersonaResponse" />
+  <xs:element name="listarPersonasTodas" type="tns:listarPersonasTodas" />
+  <xs:element name="listarPersonasTodasResponse" type="tns:listarPersonasTodasResponse" />
+  <xs:element name="modificarPersona" type="tns:modificarPersona" />
+  <xs:element name="modificarPersonaResponse" type="tns:modificarPersonaResponse" />
+  <xs:element name="obtenerPersonaPorId" type="tns:obtenerPersonaPorId" />
+  <xs:element name="obtenerPersonaPorIdResponse" type="tns:obtenerPersonaPorIdResponse" />
+  <xs:complexType name="eliminarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element minOccurs="0" name="arg3" type="xs:double" />
+      <xs:element minOccurs="0" name="arg4" type="tns:tipo" />
+      <xs:element minOccurs="0" name="arg5" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:double" />
+      <xs:element minOccurs="0" name="arg3" type="tns:tipo" />
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPersonaPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPersonaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="altura" type="xs:double" />
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPersonasTodas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPersonasTodasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Estudiante" />
+      <xs:enumeration value="Profesor" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
