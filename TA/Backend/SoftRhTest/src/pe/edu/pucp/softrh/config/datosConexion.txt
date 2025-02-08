@@ -1,0 +1,7 @@
+driver=com.mysql.cj.jdbc.Driver
+driver_type=jdbc:mysql
+database=rhstore
+host_name=ta-prog3.ch4i8mu6qd0b.us-east-1.rds.amazonaws.com
+port=3306
+user=admin
+password=UZO7svalrbWu/2q5qZFQvA==
