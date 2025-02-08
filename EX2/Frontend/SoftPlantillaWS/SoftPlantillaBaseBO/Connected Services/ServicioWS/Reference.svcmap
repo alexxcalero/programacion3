@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="79b66514-fc56-49b1-b873-4f81b8bdf107" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/SoftPlantillaWS/archivo.disco" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PostulanteWS.xsd" MetadataType="Schema" ID="ef452983-e72a-433d-bfd3-8da5fa65a82d" SourceId="1" SourceUrl="http://localhost:8080/SoftPlantillaWS/PostulanteWS?xsd=1" />
+    <MetadataFile FileName="UniversidadWS.wsdl" MetadataType="Wsdl" ID="69980c4a-e6b3-4613-a089-e1d34436054f" SourceId="1" SourceUrl="http://localhost:8080/SoftPlantillaWS/UniversidadWS?WSDL" />
+    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="93d2d940-fbea-406e-87eb-9bea271914b1" SourceId="1" SourceUrl="http://localhost:8080/SoftPlantillaWS/archivo.disco" />
+    <MetadataFile FileName="UniversidadWS.xsd" MetadataType="Schema" ID="28211467-1ae2-434b-836b-94110145d7ac" SourceId="1" SourceUrl="http://localhost:8080/SoftPlantillaWS/UniversidadWS?xsd=1" />
+    <MetadataFile FileName="PostulanteWS.wsdl" MetadataType="Wsdl" ID="f5f5d3f6-5c5e-4013-9eee-a97fefb84a67" SourceId="1" SourceUrl="http://localhost:8080/SoftPlantillaWS/PostulanteWS?WSDL" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

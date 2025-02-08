@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="softplantilla.services" targetNamespace="softplantilla.services" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="listarUniversidadesTodas" type="tns:listarUniversidadesTodas" />
+  <xs:element name="listarUniversidadesTodasResponse" type="tns:listarUniversidadesTodasResponse" />
+  <xs:complexType name="listarUniversidadesTodas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarUniversidadesTodasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:universidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="universidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idUniversidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="siglas" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
